@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        title= title
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Superheros Registry
+        
+        // Enlace requerido por el practicum
+        a(href="/update-cobj") Add to this table
+
+        // Tabla requerida
+        table(border="1", cellpadding="10")
+            thead
+                tr
+                    th Name
+                    th Superpower
+                    th Level of Power
+                    th ID
+            tbody
+                each hero in data
+                    tr
+                        td #{hero.properties.name}
+                        td #{hero.properties.superpower}
+                        td #{hero.properties.level_of_power}
+                        td #{hero.id}

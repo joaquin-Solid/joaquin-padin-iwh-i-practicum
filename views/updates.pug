@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        title= title
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Create New Superhero
+        
+        // Enlace requerido por el practicum
+        a(href="/") Return to the homepage
+
+        .form-container
+            form(action="/update-cobj", method="POST")
+                div
+                    label(for="name") Name:
+                    input(type="text", name="name", required)
+                div
+                    label(for="superpower") Superpower:
+                    input(type="text", name="superpower", required)
+                div
+                    label(for="level_of_power") Level of Power (Number):
+                    input(type="number", name="level_of_power", required)
+                div
+                    button(type="submit") Create Hero
